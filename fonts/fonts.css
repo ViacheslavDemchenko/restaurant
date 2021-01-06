@@ -1,13 +1,44 @@
 /* FONTS */
 
-/* @font-face {
-  font-family: 'Century Gothic';
-  src: url('../fonts/century-gothic/century-gothic.svg#CenturyGothic') format('svg'),
-       url('../fonts/century-gothic/century-gothic.ttf') format('truetype'),
-       url('../fonts/century-gothic/century-gothic.woff') format('woff'),
-       url('../fonts/century-gothic/century-gothic.eot'),
-       url('../fonts/century-gothic/century-gothic.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/century-gothic/century-gothic.woff2') format('woff2');
+/* Roboto */
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url('../fonts/roboto-bold/Roboto-Bold.eot');
+  src: url('../fonts/roboto-bold/Roboto-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/roboto-bold/Roboto-Bold.svg#Roboto-Bold') format('svg'),
+    url('../fonts/roboto-bold/Roboto-Bold.ttf') format('truetype'),
+    url('../fonts/roboto-bold/Roboto-Bold.woff') format('woff'),
+    url('../fonts/roboto-bold/Roboto-Bold.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
-} */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url('../fonts/roboto-medium/Roboto-Medium.eot');
+  src: url('../fonts/roboto-medium/Roboto-Medium.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/roboto-medium/Roboto-Medium.svg#Roboto-Medium') format('svg'),
+    url('../fonts/roboto-medium/Roboto-Medium.ttf') format('truetype'),
+    url('../fonts/roboto-medium/Roboto-Medium.woff') format('woff'),
+    url('../fonts/roboto-medium/Roboto-Medium.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat */
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('../fonts/montserrat-regular/Montserrat-Regular.eot');
+  src: url('../fonts/montserrat-regular/Montserrat-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/montserrat-regular/Montserrat-Regular.svg#Montserrat-Regular') format('svg'),
+    url('../fonts/montserrat-regular/Montserrat-Regular.ttf') format('truetype'),
+    url('../fonts/montserrat-regular/Montserrat-Regular.woff') format('woff'),
+    url('../fonts/montserrat-regular/Montserrat-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,10 +1,10 @@
 /* BASE STYLES */
 
-/* PADDINGS */
-
 /* FONTS */
 
-/* CenturyGothic */
+/* Roboto */
+
+/* Montserrat */
 
 /* COLORS */
 
@@ -18,7 +18,7 @@
 
 html,
 body {
-  font-family: "Arial", "Tahoma", sans-serif;
+  font-family: "Roboto", "Montserrat-Regular", "Tahoma", sans-serif;
   font-size: 16px;
   font-weight: 400;
   font-style: normal;
@@ -547,25 +547,44 @@ template {
 
 /* FONTS */
 
-/* @font-face {
-  font-family: 'Century Gothic';
-  src: url('../fonts/century-gothic/century-gothic.svg#CenturyGothic') format('svg'),
-       url('../fonts/century-gothic/century-gothic.ttf') format('truetype'),
-       url('../fonts/century-gothic/century-gothic.woff') format('woff'),
-       url('../fonts/century-gothic/century-gothic.eot'),
-       url('../fonts/century-gothic/century-gothic.eot?#iefix') format('embedded-opentype'),
-       url('../fonts/century-gothic/century-gothic.woff2') format('woff2');
+/* Roboto */
+
+@font-face {
+  font-family: 'Roboto-Bold';
+  src: url("../fonts/roboto-bold/Roboto-Bold.eot");
+  src: url("../fonts/roboto-bold/Roboto-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-bold/Roboto-Bold.svg#Roboto-Bold") format("svg"), url("../fonts/roboto-bold/Roboto-Bold.ttf") format("truetype"), url("../fonts/roboto-bold/Roboto-Bold.woff") format("woff"), url("../fonts/roboto-bold/Roboto-Bold.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
-} */
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Roboto-Medium';
+  src: url("../fonts/roboto-medium/Roboto-Medium.eot");
+  src: url("../fonts/roboto-medium/Roboto-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto-medium/Roboto-Medium.svg#Roboto-Medium") format("svg"), url("../fonts/roboto-medium/Roboto-Medium.ttf") format("truetype"), url("../fonts/roboto-medium/Roboto-Medium.woff") format("woff"), url("../fonts/roboto-medium/Roboto-Medium.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Montserrat */
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("../fonts/montserrat-regular/Montserrat-Regular.eot");
+  src: url("../fonts/montserrat-regular/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/montserrat-regular/Montserrat-Regular.svg#Montserrat-Regular") format("svg"), url("../fonts/montserrat-regular/Montserrat-Regular.ttf") format("truetype"), url("../fonts/montserrat-regular/Montserrat-Regular.woff") format("woff"), url("../fonts/montserrat-regular/Montserrat-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 /* MIXINS & VARIABLES */
 
-/* PADDINGS */
-
 /* FONTS */
 
-/* CenturyGothic */
+/* Roboto */
+
+/* Montserrat */
 
 /* COLORS */
 
@@ -583,9 +602,6 @@ template {
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: cover !important;
 }
 
 .header__inner {
@@ -597,16 +613,10 @@ template {
 
 .about {
   width: 100%;
-  min-height: 25rem;
   padding: 1.25rem 0;
-  background-color: #fff;
-  background-repeat: no-repeat;
-  background-position: 100% 100%;
-  background-size: 17.8125rem 20rem;
 }
 
 .about__inner {
-  min-height: 25rem;
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
@@ -616,21 +626,16 @@ template {
 .recipes {
   position: relative;
   width: 100%;
-  min-height: 34.375rem;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: cover !important;
 }
 
 .recipes__inner {
   position: relative;
-  min-height: 34.375rem;
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
   padding: 1.875rem 0 1.875rem 0;
-  background-repeat: no-repeat !important;
+  background-repeat: no-repeat;
 }
 
 .gallery {
@@ -638,12 +643,10 @@ template {
   width: 100%;
   display: flex;
   justify-content: center;
-  min-height: 42.375rem;
   background-color: #fff;
 }
 
 .gallery__inner {
-  min-height: 42.375rem;
   padding: 1.875rem 0 1.25rem 0;
   display: flex;
   flex-direction: column;
@@ -659,12 +662,10 @@ template {
 .menu {
   position: relative;
   width: 100%;
-  min-height: 133.375rem;
 }
 
 .menu__inner {
-  min-height: 133.375rem;
-  padding: 5.9375rem 0 10.625rem 0;
+  padding: 3.125rem 0 1.875rem 0;
 }
 
 .menu__halfdish {
@@ -681,7 +682,6 @@ template {
 .app {
   position: relative;
   width: 100%;
-  min-height: 42.375rem;
   background: #000;
   background-repeat: no-repeat !important;
   background-position: center !important;
@@ -689,38 +689,34 @@ template {
 }
 
 .app__inner {
-  min-height: 42.375rem;
   padding: 1.25rem 0 1.5625rem 0;
 }
 
 .footer {
   position: relative;
   width: 100%;
-  min-height: 50rem;
-  overflow-x: hidden;
   background-color: #141414;
 }
 
 .footer__inner {
-  min-height: 42.375rem;
-  padding: 1.25rem 0 1.25rem 0;
+  padding: 1.25rem 0;
 }
 
 .footer__top {
-  min-height: 29.6875rem;
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
   margin-right: -15px;
   justify-content: center;
+  padding-bottom: 2.5rem;
 }
 
 .footer__bottom {
+  padding: 1.25rem 0;
   background-color: #000;
 }
 
 .footer__bottom-inner {
-  min-height: 3.9375rem;
   display: flex;
   flex-wrap: wrap;
   margin-left: -15px;
@@ -845,7 +841,10 @@ template {
 
 .nav__link {
   padding: 0.625rem;
-  text-transform: capitalize;
+  font-family: "Montserrat-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
   font-size: 1.0625rem;
   color: #fff;
 }
@@ -1014,6 +1013,10 @@ template {
 
 .btn {
   display: inline-block;
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
   font-size: 1rem;
   color: #fff;
   outline: none;
@@ -1052,25 +1055,15 @@ template {
 .logo {
   position: absolute;
   top: 0;
-  left: 20.3125rem;
-  display: none;
+  left: 4.0625rem;
+  width: 5rem;
+  height: 2.5rem;
 }
 
 .logo__link {
   display: block;
-  width: 25.5625rem;
-  height: 12.6875rem;
-  background-repeat: no-repeat !important;
-  background-position: center !important;
-  background-size: cover !important;
-}
-
-.webp .logo__link {
-  background: url(../img/logo-lg@1x.webp);
-}
-
-.no-webp .logo__link {
-  background: url(../img/logo-lg@1x.png);
+  width: 5rem;
+  height: 2.5rem;
 }
 
 .header__center {
@@ -1100,7 +1093,12 @@ template {
 
 .main-title {
   margin: 0 0 1.25rem 0;
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
   font-size: 3.125rem;
+  font-style: italic;
   color: #fff;
 }
 
@@ -1108,6 +1106,10 @@ template {
   max-width: 66.5625rem;
   text-align: center;
   margin: 0 0 2.5rem 0;
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
   font-size: 1rem;
   line-height: 1.2;
   color: #fff;
@@ -1115,6 +1117,10 @@ template {
 
 .section__pretitle {
   margin-bottom: 0.9375rem;
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
   font-size: 1.375rem;
   color: #000;
 }
@@ -1126,6 +1132,10 @@ template {
 .section__title {
   margin-bottom: 1.25rem;
   text-transform: uppercase;
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
   font-size: 1.5rem;
   color: #000;
 }
@@ -1136,6 +1146,10 @@ template {
 
 .about__text {
   margin-bottom: 1.25rem;
+  font-family: "Montserrat-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
   font-size: 0.9375rem;
   line-height: 1.25rem;
   color: #000;
@@ -1162,14 +1176,14 @@ template {
 
 .img__back,
 .img__front {
-  width: 13.125rem;
-  height: 9.25rem;
+  width: 12.75rem;
+  height: 9rem;
   border: 0.625rem solid #fff;
   background-color: #000;
   box-shadow: 0 0 0.0625rem 0.0625rem rgba(0, 0, 0, 0.3);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
 }
 
 .img__back {
@@ -1182,28 +1196,12 @@ template {
   transform: rotate(-11deg);
 }
 
-.webp .img__back {
-  background-image: url(../img/restaurant-back-xxs@1x.webp);
-}
-
-.no-webp .img__back {
-  background-image: url(../img/restaurant-back-xxs@1x.png);
-}
-
 .webp .img__front,
 .no-webp .img__front {
   position: absolute;
   transform: rotate(11deg);
   top: -0.9375rem;
   left: 1.0625rem;
-}
-
-.webp .img__front {
-  background-image: url(../img/restaurant-front-xxs@1x.webp);
-}
-
-.no-webp .img__front {
-  background-image: url(../img/restaurant-front-xxs@1x.jpg);
 }
 
 .recipes-content {
@@ -1273,8 +1271,9 @@ template {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 13.75rem;
-  height: 12.3125rem;
+  height: 13.75rem;
   overflow: hidden;
   padding: 1.5625rem 0.625rem;
   background-color: rgba(0, 0, 0, 0.7);
@@ -1286,78 +1285,86 @@ template {
   margin-bottom: 1.25rem;
   text-align: center;
   text-transform: uppercase;
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
   font-size: 1.125rem;
   color: #fff;
 }
 
 .dish-price {
   margin-bottom: 1.25rem;
+  font-family: "Montserrat-Regular";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
   font-size: 1.375rem;
   color: #fff;
 }
 
 .webp .img-first {
-  background-image: url(../img/dish-lg-1@1x.webp);
+  background: url(../img/dish-lg-1@1x.webp);
 }
 
 .no-webp .img-first {
-  background-image: url(../img/dish-lg-1@1x.jpg);
+  background: url(../img/dish-lg-1@1x.jpg);
 }
 
 .webp .img-second {
-  background-image: url(../img/dish-lg-2@1x.webp);
+  background: url(../img/dish-lg-2@1x.webp);
 }
 
 .no-webp .img-second {
-  background-image: url(../img/dish-lg-2@1x.jpg);
+  background: url(../img/dish-lg-2@1x.jpg);
 }
 
 .webp .img-third {
-  background-image: url(../img/dish-lg-3@1x.webp);
+  background: url(../img/dish-lg-3@1x.webp);
 }
 
 .no-webp .img-third {
-  background-image: url(../img/dish-lg-3@1x.jpg);
+  background: url(../img/dish-lg-3@1x.jpg);
 }
 
 .webp .img-fourth {
-  background-image: url(../img/dish-lg-4@1x.webp);
+  background: url(../img/dish-lg-4@1x.webp);
 }
 
 .no-webp .img-fourth {
-  background-image: url(../img/dish-lg-4@1x.jpg);
+  background: url(../img/dish-lg-4@1x.jpg);
 }
 
 .webp .img-fifth {
-  background-image: url(../img/dish-lg-5@1x.webp);
+  background: url(../img/dish-lg-5@1x.webp);
 }
 
 .no-webp .img-fifth {
-  background-image: url(../img/dish-lg-5@1x.jpg);
+  background: url(../img/dish-lg-5@1x.jpg);
 }
 
 .webp .img-sixth {
-  background-image: url(../img/dish-lg-6@1x.webp);
+  background: url(../img/dish-lg-6@1x.webp);
 }
 
 .no-webp .img-sixth {
-  background-image: url(../img/dish-lg-6@1x.jpg);
+  background: url(../img/dish-lg-6@1x.jpg);
 }
 
 .webp .img-seventh {
-  background-image: url(../img/dish-lg-7@1x.webp);
+  background: url(../img/dish-lg-7@1x.webp);
 }
 
 .no-webp .img-seventh {
-  background-image: url(../img/dish-lg-7@1x.jpg);
+  background: url(../img/dish-lg-7@1x.jpg);
 }
 
 .webp .img-eighth {
-  background-image: url(../img/dish-lg-8@1x.webp);
+  background: url(../img/dish-lg-8@1x.webp);
 }
 
 .no-webp .img-eighth {
-  background-image: url(../img/dish-lg-8@1x.jpg);
+  background: url(../img/dish-lg-8@1x.jpg);
 }
 
 .menu-block {
@@ -1442,6 +1449,7 @@ template {
   margin-right: -15px;
   flex-direction: column;
   align-items: center;
+  justify-content: space-between;
 }
 
 .menu-item:not(:last-child) {
@@ -1520,32 +1528,37 @@ template {
 }
 
 .app__title,
-.add__subtitle {
-  font-family: 'TimesNewPSMT';
-}
-
-.app__title,
 .add__subtitle,
 .app__pretitle {
-  line-height: 1.2;
-  font-weight: 400;
   text-transform: uppercase;
   color: #fff;
 }
 
 .app__pretitle {
   margin-bottom: 1.1875rem;
-  font-family: 'Pacifico';
+  font-family: "Roboto-Medium";
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
   font-size: 1.25rem;
 }
 
 .app__title {
   margin-bottom: 1.125rem;
+  text-align: center;
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
   font-size: 2.5rem;
 }
 
 .add__subtitle {
   margin-bottom: 3.25rem;
+  font-family: "Roboto-Bold";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
   font-size: 1.25rem;
 }
 
@@ -1698,72 +1711,32 @@ template {
   justify-content: space-between;
 }
 
-@media (min-width: 0rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 0rem) and (min-resolution: 192dpi) {
-  .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xss@2x.webp);
-  }
-
-  .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xss@2x.jpg);
-  }
-
-  .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xss@2x.webp);
-  }
-
-  .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xss@2x.jpg);
-  }
-
-  .webp .menu {
-    background: url(../img/pepper-left-lg@2x.webp), linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-lg@2x.webp);
-    background-repeat: no-repeat, repeat, no-repeat;
-    background-position: 0 100%, 100% 100%, center;
-    background-size: 16.8125rem, 20.6875rem, cover, cover;
-  }
-
-  .no-webp .menu {
-    background: url(../img/pepper-left-lg@2x.png), linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-lg@2x.jpg);
-    background-repeat: no-repeat, repeat, no-repeat;
-    background-position: 0 100%, 100% 100%, center;
-    background-size: 16.8125rem, 20.6875rem, cover, cover;
-  }
-
-  .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xss@2x.webp);
-  }
-
-  .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xss@2x.jpg);
-  }
-}
-
 @media (min-width: 0rem) {
   .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xss@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xs@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xss@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xs@1x.jpg) center/cover no-repeat;
   }
 
   .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xss@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xs@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xss@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xs@1x.jpg) center/cover no-repeat;
   }
 
   .webp .menu {
-    background: url(../img/pepper-left-lg@1x.webp), linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-lg@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-xxs@1x.webp);
     background-repeat: no-repeat, repeat, no-repeat;
     background-position: 0 100%, 100% 100%, center;
     background-size: 16.8125rem, 20.6875rem, cover, cover;
   }
 
   .no-webp .menu {
-    background: url(../img/pepper-left-lg@1x.png), linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-lg@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-xxs@1x.jpg);
     background-repeat: no-repeat, repeat, no-repeat;
     background-position: 0 100%, 100% 100%, center;
     background-size: 16.8125rem, 20.6875rem, cover, cover;
@@ -1776,33 +1749,99 @@ template {
   .no-webp .app {
     background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xss@1x.jpg);
   }
+
+  .webp .logo__link {
+    background: url(../img/logo-xxs@1x.webp) 100% 100%/5rem 2.5rem no-repeat;
+  }
+
+  .no-webp .logo__link {
+    background: url(../img/logo-xxs@1x.jpg) 100% 100%/5rem 2.5rem no-repeat;
+  }
+
+  .webp .img__back {
+    background: url(../img/restaurant-front-xxs@1x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .img__back {
+    background: url(../img/restaurant-front-xxs@1x.png) center/cover no-repeat;
+  }
+
+  .webp .img__front {
+    background: url(../img/restaurant-front-xxs@1x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .img__front {
+    background: url(../img/restaurant-front-xxs@1x.jpg) center/cover no-repeat;
+  }
 }
 
-@media (min-width: 30rem) {
+@media (min-width: 0rem) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 0rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 0rem) and (min-resolution: 192dpi) {
   .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-ss@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xs@2x.webp) center/cover no-repeat;
   }
 
   .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-ss@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xs@2x.jpg) center/cover no-repeat;
   }
 
   .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-ss@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xs@2x.webp) center/cover no-repeat;
   }
 
   .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-ss@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xs@2x.jpg) center/cover no-repeat;
+  }
+
+  .webp .menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-xxs@2x.webp);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: 0 100%, 100% 100%, center;
+    background-size: 16.8125rem, 20.6875rem, cover, cover;
+  }
+
+  .no-webp .menu {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-xxs@2x.jpg);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: 0 100%, 100% 100%, center;
+    background-size: 16.8125rem, 20.6875rem, cover, cover;
   }
 
   .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-ss@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xss@2x.webp);
   }
 
   .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-ss@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xss@2x.jpg);
   }
 
+  .webp .img__back {
+    background: url(../img/restaurant-front-xxs@2x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .img__back {
+    background: url(../img/restaurant-front-xxs@2x.png) center/cover no-repeat;
+  }
+}
+
+@media (min-width: 0rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 0rem) and (min-resolution: 192dpi) {
+  .webp .logo__link {
+    background: url(../img/logo-xxs@2x.webp) 100% 100%/5rem 2.5rem no-repeat;
+  }
+
+  .no-webp .logo__link {
+    background: url(../img/logo-xxs@2x.jpg) 100% 100%/5rem 2.5rem no-repeat;
+  }
+
+  .webp .img__front {
+    background: url(../img/restaurant-front-xxs@2x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .img__front {
+    background: url(../img/restaurant-front-xxs@2x.jpg) center/cover no-repeat;
+  }
+}
+
+@media (min-width: 30rem) {
   .img__back,
   .img__front {
     width: 15rem;
@@ -1827,77 +1866,11 @@ template {
   }
 }
 
-@media (min-width: 30rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 30rem) and (min-resolution: 192dpi) {
-  .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-ss@2x.webp);
-  }
-
-  .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-ss@2x.jpg);
-  }
-
-  .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-ss@2x.webp);
-  }
-
-  .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-ss@2x.jpg);
-  }
-
-  .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-ss@2x.webp);
-  }
-
-  .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-ss@2x.jpg);
-  }
-}
-
 @media (min-width: 37.5rem) {
-  .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xs@1x.webp);
-  }
-
-  .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xs@1x.jpg);
-  }
-
-  .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xs@1x.webp);
-  }
-
-  .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xs@1x.jpg);
-  }
-
-  .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xs@1x.webp);
-  }
-
-  .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xs@1x.jpg);
-  }
-
   .img__back,
   .img__front {
     width: 17.5rem;
     height: 14.25rem;
-  }
-
-  .webp .img__back {
-    background-image: url(../img/restaurant-back-lg@1x.webp);
-  }
-
-  .no-webp .img__back {
-    background-image: url(../img/restaurant-back-lg@1x.png);
-  }
-
-  .webp .img__front {
-    background-image: url(../img/restaurant-front-lg@1x.webp);
-  }
-
-  .no-webp .img__front {
-    background-image: url(../img/restaurant-front-lg@1x.jpg);
   }
 
   .content-block {
@@ -1905,113 +1878,129 @@ template {
   }
 }
 
-@media (min-width: 37.5rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 37.5rem) and (min-resolution: 192dpi) {
+@media (min-width: 43.75rem) {
+  .webp .logo__link {
+    background: url(../img/logo-lg@1x.webp) 100% 100%/10rem 5rem no-repeat;
+  }
+
+  .no-webp .logo__link {
+    background: url(../img/logo-lg@1x.jpg) 100% 100%/10rem 5rem no-repeat;
+  }
+}
+
+@media (min-width: 43.75rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 43.75rem) and (min-resolution: 192dpi) {
+  .webp .logo__link {
+    background: url(../img/logo-lg@2x.webp) 100% 100%/10rem 5rem no-repeat;
+  }
+
+  .no-webp .logo__link {
+    background: url(../img/logo-lg@2x.jpg) 100% 100%/10rem 5rem no-repeat;
+  }
+}
+
+@media (min-width: 48rem) {
   .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xs@2x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-sm@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xs@2x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-sm@1x.jpg) center/cover no-repeat;
   }
 
   .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xs@2x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-sm@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xs@2x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-sm@1x.jpg) center/cover no-repeat;
   }
 
   .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xs@2x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-sm@1x.webp);
   }
 
   .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xs@2x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-sm@1x.jpg);
   }
 
   .webp .img__back {
-    background-image: url(../img/restaurant-back-lg@2x.webp);
+    background: url(../img/restaurant-front-lg@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .img__back {
-    background-image: url(../img/restaurant-back-lg@2x.png);
+    background: url(../img/restaurant-front-lg@1x.png) center/cover no-repeat;
   }
 
   .webp .img__front {
-    background-image: url(../img/restaurant-front-lg@2x.webp);
+    background: url(../img/restaurant-front-lg@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .img__front {
-    background-image: url(../img/restaurant-front-lg@2x.jpg);
+    background: url(../img/restaurant-front-lg@1x.jpg) center/cover no-repeat;
+  }
+}
+
+@media (min-width: 48rem) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 48rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 48rem) and (min-resolution: 192dpi) {
+  .webp .header {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-sm@2x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .header {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-sm@2x.jpg) center/cover no-repeat;
+  }
+
+  .webp .recipes {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-sm@2x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .recipes {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-sm@2x.jpg) center/cover no-repeat;
+  }
+
+  .webp .app {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-sm@2x.webp);
+  }
+
+  .no-webp .app {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-sm@2x.jpg);
+  }
+
+  .webp .img__back {
+    background: url(../img/restaurant-front-lg@2x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .img__back {
+    background: url(../img/restaurant-front-lg@2x.png) center/cover no-repeat;
+  }
+}
+
+@media (min-width: 48rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 48rem) and (min-resolution: 192dpi) {
+  .webp .img__front {
+    background: url(../img/restaurant-front-lg@2x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .img__front {
+    background: url(../img/restaurant-front-lg@2x.jpg) center/cover no-repeat;
   }
 }
 
 @media (min-width: 50rem) {
-  .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xsm@1x.webp);
-  }
-
-  .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xsm@1x.jpg);
-  }
-
-  .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xsm@1x.webp);
-  }
-
-  .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xsm@1x.jpg);
-  }
-
   .webp .menu__halfdish {
     background-image: url(../img/half-dish-2-lg@1x.webp);
   }
 
   .no-webp .menu__halfdish {
     background-image: url(../img/half-dish-2-lg@1x.png);
-  }
-
-  .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xsm@1x.webp);
-  }
-
-  .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xsm@1x.jpg);
   }
 }
 
-@media (min-width: 50rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 50rem) and (min-resolution: 192dpi) {
-  .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xsm@2x.webp);
-  }
-
-  .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-xsm@2x.jpg);
-  }
-
-  .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xsm@2x.webp);
-  }
-
-  .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-xsm@2x.jpg);
-  }
-
+@media (min-width: 50rem) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 50rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 50rem) and (min-resolution: 192dpi) {
   .webp .menu__halfdish {
-    background-image: url(../img/half-dish-2-lg@1x.webp);
+    background-image: url(../img/half-dish-2-lg@2x.webp);
   }
 
   .no-webp .menu__halfdish {
-    background-image: url(../img/half-dish-2-lg@1x.png);
-  }
-
-  .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xsm@2x.webp);
-  }
-
-  .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-xsm@2x.jpg);
+    background-image: url(../img/half-dish-2-lg@2x.png);
   }
 }
 
@@ -2028,19 +2017,27 @@ template {
 
 @media (min-width: 64rem) {
   .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-sm@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-md@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-sm@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-md@1x.jpg) center/cover no-repeat;
+  }
+
+  .webp .about {
+    background: url(../img/pepper-right-lg@1x.webp) 100% 100%/289px 345px no-repeat, #fff;
+  }
+
+  .no-webp .about {
+    background: url(../img/pepper-right-lg@1x.jpg) 100% 100%/289px 345px no-repeat, #fff;
   }
 
   .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-sm@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-md@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-sm@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-md@1x.jpg) center/cover no-repeat;
   }
 
   .webp .recipes__inner {
@@ -2056,11 +2053,11 @@ template {
   }
 
   .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-sm@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-md@1x.webp);
   }
 
   .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-sm@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-md@1x.jpg);
   }
 
   .btn {
@@ -2077,21 +2074,29 @@ template {
   }
 }
 
-@media (min-width: 64rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 64rem) and (min-resolution: 192dpi) {
+@media (min-width: 64rem) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 64rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 64rem) and (min-resolution: 192dpi) {
   .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-sm@2x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-md@2x.webp) center/cover no-repeat;
   }
 
   .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-sm@2x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-md@2x.jpg) center/cover no-repeat;
+  }
+
+  .webp .about {
+    background: url(../img/pepper-right-lg@2x.webp) 100% 100%/289px 345px no-repeat, #fff;
+  }
+
+  .no-webp .about {
+    background: url(../img/pepper-right-lg@2x.jpg) 100% 100%/289px 345px no-repeat, #fff;
   }
 
   .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-sm@2x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-md@2x.webp) center/cover no-repeat;
   }
 
   .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-sm@2x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-md@2x.jpg) center/cover no-repeat;
   }
 
   .webp .recipes__inner {
@@ -2107,62 +2112,6 @@ template {
   }
 
   .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-sm@2x.webp);
-  }
-
-  .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-sm@2x.jpg);
-  }
-}
-
-@media (min-width: 85.3125rem) {
-  .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-md@1x.webp);
-  }
-
-  .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-md@1x.jpg);
-  }
-
-  .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-md@1x.webp);
-  }
-
-  .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-md@1x.jpg);
-  }
-
-  .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-md@1x.webp);
-  }
-
-  .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-md@1x.jpg);
-  }
-
-  .social-list--footer {
-    padding-right: 0.9375rem;
-  }
-}
-
-@media (min-width: 85.3125rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 85.3125rem) and (min-resolution: 192dpi) {
-  .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-md@2x.webp);
-  }
-
-  .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-md@2x.jpg);
-  }
-
-  .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-md@2x.webp);
-  }
-
-  .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-md@2x.jpg);
-  }
-
-  .webp .app {
     background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-md@2x.webp);
   }
 
@@ -2171,21 +2120,21 @@ template {
   }
 }
 
-@media (min-width: 90rem) {
+@media (min-width: 85.3125rem) {
   .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-lg@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-lg@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-lg@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-lg@1x.jpg) center/cover no-repeat;
   }
 
   .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-lg@1x.webp);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-lg@1x.webp) center/cover no-repeat;
   }
 
   .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-lg@1x.jpg);
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-lg@1x.jpg) center/cover no-repeat;
   }
 
   .webp .recipes__inner {
@@ -2200,12 +2149,110 @@ template {
     background-size: 670px 564px;
   }
 
+  .webp .menu {
+    background: url(../img/pepper-left-lg@1x.webp), linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-lg@1x.webp);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: 0 100%, 100% 100%, center;
+    background-size: 16.8125rem, 20.6875rem, cover, cover;
+  }
+
+  .no-webp .menu {
+    background: url(../img/pepper-left-lg@1x.png), linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-lg@1x.jpg);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: 0 100%, 100% 100%, center;
+    background-size: 16.8125rem, 20.6875rem, cover, cover;
+  }
+
   .webp .app {
     background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-lg@1x.webp);
   }
 
   .no-webp .app {
     background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-lg@1x.jpg);
+  }
+
+  .webp .logo__link {
+    background-size: 18.75rem 9.375rem;
+  }
+
+  .no-webp .logo__link {
+    background-size: 18.75rem 9.375rem;
+  }
+
+  .social-list--footer {
+    padding-right: 0.9375rem;
+  }
+}
+
+@media (min-width: 85.3125rem) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 85.3125rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 85.3125rem) and (min-resolution: 192dpi) {
+  .webp .header {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-lg@2x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .header {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-lg@2x.jpg) center/cover no-repeat;
+  }
+
+  .webp .recipes {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-lg@2x.webp) center/cover no-repeat;
+  }
+
+  .no-webp .recipes {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-lg@2x.jpg) center/cover no-repeat;
+  }
+
+  .webp .recipes__inner {
+    background-image: url(../img/double-dishes-lg@2x.webp);
+    background-position: 90% 70px;
+    background-size: 670px 564px;
+  }
+
+  .no-webp .recipes__inner {
+    background-image: url(../img/double-dishes-lg@2x.jpg);
+    background-position: 90% 70px;
+    background-size: 670px 564px;
+  }
+
+  .webp .menu {
+    background: url(../img/pepper-left-lg@2x.webp), linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-lg@2x.webp);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: 0 100%, 100% 100%, center;
+    background-size: 16.8125rem, 20.6875rem, cover, cover;
+  }
+
+  .no-webp .menu {
+    background: url(../img/pepper-left-lg@2x.png), linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/menu-bg-lg@2x.jpg);
+    background-repeat: no-repeat, repeat, no-repeat;
+    background-position: 0 100%, 100% 100%, center;
+    background-size: 16.8125rem, 20.6875rem, cover, cover;
+  }
+
+  .webp .app {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-lg@2x.webp);
+  }
+
+  .no-webp .app {
+    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-lg@2x.jpg);
+  }
+}
+
+@media (min-width: 85.3125rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 85.3125rem) and (min-resolution: 192dpi) {
+  .webp .logo__link {
+    background: url(../img/logo-lg@2x.webp) 100% 100%/18.75rem 9.375rem no-repeat;
+  }
+
+  .no-webp .logo__link {
+    background: url(../img/logo-lg@2x.jpg) 100% 100%/18.75rem 9.375rem no-repeat;
+  }
+}
+
+@media (min-width: 90rem) {
+  .webp .logo__link {
+    background-size: 25.5625rem 12.75rem;
+  }
+
+  .no-webp .logo__link {
+    background-size: 25.5625rem 12.75rem;
   }
 
   .section__pretitle {
@@ -2223,40 +2270,12 @@ template {
 }
 
 @media (min-width: 90rem) and (-webkit-min-device-pixel-ratio: 2), (min-width: 90rem) and (min-resolution: 192dpi) {
-  .webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-lg@2x.webp);
+  .webp .logo__link {
+    background: url(../img/logo-lg@2x.webp) 100% 100%/25.5625rem 12.75rem no-repeat;
   }
 
-  .no-webp .header {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/header-bg-lg@2x.jpg);
-  }
-
-  .webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-lg@2x.webp);
-  }
-
-  .no-webp .recipes {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/recipes-bg-lg@2x.jpg);
-  }
-
-  .webp .recipes__inner {
-    background-image: url(../img/double-dishes-lg@2x.webp);
-    background-position: 90% 70px;
-    background-size: 670px 564px;
-  }
-
-  .no-webp .recipes__inner {
-    background-image: url(../img/double-dishes-lg@2x.jpg);
-    background-position: 90% 70px;
-    background-size: 670px 564px;
-  }
-
-  .webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-lg@2x.webp);
-  }
-
-  .no-webp .app {
-    background: linear-gradient(rgba(0, 0, 0, 0.64), rgba(0, 0, 0, 0.64)), url(../img/app-bg-lg@2x.jpg);
+  .no-webp .logo__link {
+    background: url(../img/logo-lg@2x.jpg) 100% 100%/25.5625rem 12.75rem no-repeat;
   }
 }
 
@@ -2472,6 +2491,16 @@ template {
     width: calc(50% - 20px);
   }
 
+  .logo {
+    width: 10rem;
+    height: 5rem;
+  }
+
+  .logo__link {
+    width: 10rem;
+    height: 5rem;
+  }
+
   .header__center {
     margin-left: -10px;
     margin-right: -10px;
@@ -2571,40 +2600,6 @@ template {
   }
 }
 
-@media screen and (min-width: 800px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 800px) and (min-resolution: 192dpi) {
-  .webp .about {
-    background-image: url(../img/pepper-right-lg@2x.webp);
-  }
-
-  .no-webp .about {
-    background-image: url(../img/pepper-right-lg@2x.jpg);
-  }
-
-  .webp .gallery__halfdish {
-    background-image: url(../img/half-dish-1-lg@1x.webp);
-  }
-
-  .no-webp .gallery__halfdish {
-    background-image: url(../img/half-dish-1-lg@1x.png);
-  }
-
-  .webp .footer__halfdish--left {
-    background-image: url(../img/half-dish-3-lg@2x.webp);
-  }
-
-  .no-webp .footer__halfdish--left {
-    background-image: url(../img/half-dish-3-lg@2x.png);
-  }
-
-  .webp .footer__halfdish--right {
-    background-image: url(../img/half-dish-4-lg@2x.webp);
-  }
-
-  .no-webp .footer__halfdish--right {
-    background-image: url(../img/half-dish-4-lg@2x.png);
-  }
-}
-
 @media screen and (min-width: 800px) {
   .container-fluid {
     padding-left: 10px;
@@ -2617,7 +2612,6 @@ template {
   }
 
   .about {
-    min-height: 43.75rem;
     padding: 3.125rem 0;
   }
 
@@ -2626,21 +2620,13 @@ template {
     margin-right: -10px;
   }
 
-  .webp .about {
-    background-image: url(../img/pepper-right-lg@1x.webp);
-  }
-
-  .no-webp .about {
-    background-image: url(../img/pepper-right-lg@1x.jpg);
-  }
-
   .recipes__inner {
     margin-left: -10px;
     margin-right: -10px;
   }
 
   .gallery {
-    padding-bottom: 7.5rem;
+    padding-bottom: 8.4375rem;
   }
 
   .gallery__halfdish {
@@ -2872,6 +2858,14 @@ template {
     max-height: 3.625rem;
   }
 
+  .app__title {
+    text-align: left;
+  }
+
+  .add__subtitle {
+    text-align: left;
+  }
+
   .footer-col-first,
   .footer-col-second,
   .footer-col-third {
@@ -2901,21 +2895,31 @@ template {
   }
 }
 
-@media screen and (min-width: 1024px) and (min-width: 1200px) {
-  .contacts {
-    margin-left: -15px;
-    margin-right: -15px;
+@media screen and (min-width: 800px) and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-width: 800px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 800px) and (min-resolution: 192dpi) {
+  .webp .gallery__halfdish {
+    background-image: url(../img/half-dish-1-lg@2x.webp);
   }
 
-  .nav {
-    margin-left: 15px;
-    margin-right: 15px;
+  .no-webp .gallery__halfdish {
+    background-image: url(../img/half-dish-1-lg@2x.png);
   }
 }
 
-@media screen and (min-width: 1024px) and (min-width: 1440px) {
-  .nav {
-    width: calc(66.66667% - 30px);
+@media screen and (min-width: 800px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 800px) and (min-resolution: 192dpi) {
+  .webp .footer__halfdish--left {
+    background-image: url(../img/half-dish-3-lg@2x.webp);
+  }
+
+  .no-webp .footer__halfdish--left {
+    background-image: url(../img/half-dish-3-lg@2x.png);
+  }
+
+  .webp .footer__halfdish--right {
+    background-image: url(../img/half-dish-4-lg@2x.webp);
+  }
+
+  .no-webp .footer__halfdish--right {
+    background-image: url(../img/half-dish-4-lg@2x.png);
   }
 }
 
@@ -2935,17 +2939,12 @@ template {
     margin-right: -10px;
   }
 
-  .recipes {
-    min-height: 40.625rem;
-  }
-
   .recipes__inner {
     margin-left: -10px;
     margin-right: -10px;
   }
 
   .recipes__inner {
-    min-height: 40.625rem;
     max-width: 62.5rem;
     margin: auto !important;
   }
@@ -3214,34 +3213,6 @@ template {
   }
 }
 
-@media screen and (min-width: 1024px) and (min-width: 1024px) {
-  .contacts {
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-
-  .nav {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-
-  .nav {
-    width: calc(66.66667% - 20px);
-  }
-}
-
-@media screen and (min-width: 1024px) and (min-width: 800px) {
-  .contacts {
-    margin-left: -10px;
-    margin-right: -10px;
-  }
-
-  .nav {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-}
-
 @media screen and (min-width: 1024px) and (min-width: 320px) {
   .contacts {
     margin-left: -5px;
@@ -3263,6 +3234,52 @@ template {
   .nav {
     margin-left: 10px;
     margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 800px) {
+  .contacts {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .nav {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1024px) {
+  .contacts {
+    margin-left: -10px;
+    margin-right: -10px;
+  }
+
+  .nav {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .nav {
+    width: calc(66.66667% - 20px);
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1200px) {
+  .contacts {
+    margin-left: -15px;
+    margin-right: -15px;
+  }
+
+  .nav {
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 1024px) and (min-width: 1440px) {
+  .nav {
+    width: calc(66.66667% - 30px);
   }
 }
 
@@ -3446,6 +3463,17 @@ template {
 
   .footer__top {
     justify-content: space-around;
+    padding-bottom: 5rem;
+  }
+
+  .logo {
+    width: 18.75rem;
+    height: 9.375rem;
+  }
+
+  .logo__link {
+    width: 18.75rem;
+    height: 9.375rem;
   }
 
   .main-title {
@@ -3538,47 +3566,25 @@ template {
 }
 
 @media screen and (min-width: 1440px) {
-  .about {
-    min-height: 38.5rem;
-  }
-
-  .about__inner {
-    min-height: 38.5rem;
-  }
-
   .recipes {
-    min-height: 49.125rem;
+    padding-top: 2.313rem;
   }
 
   .recipes__inner {
-    min-height: 49.125rem;
     max-width: 87.5rem;
     padding: 4.25rem 0 9.375rem 0;
   }
 
   .gallery {
-    min-height: 63.625rem;
+    padding-bottom: 2.1875rem;
   }
 
   .gallery__inner {
-    min-height: 63.625rem;
     padding: 3.75rem 0 7.375rem 0;
   }
 
-  .app {
-    min-height: 44rem;
-  }
-
-  .app__inner {
-    min-height: 44rem;
-  }
-
-  .footer {
-    min-height: 33.625rem;
-  }
-
-  .footer__inner {
-    min-height: 33.625rem;
+  .menu__inner {
+    padding: 5.9375rem 0 10.625rem 0;
   }
 
   .footer__halfdish--left {
@@ -3615,6 +3621,16 @@ template {
 
   .social-list {
     width: calc(25% - 30px);
+  }
+
+  .logo {
+    width: 25.5625rem;
+    height: 12.75rem;
+  }
+
+  .logo__link {
+    width: 25.5625rem;
+    height: 12.75rem;
   }
 
   .header__center {
@@ -3665,7 +3681,7 @@ template {
 
   .content-block {
     max-width: 33.375rem;
-    margin-top: 2.25rem;
+    margin-top: 1.75rem;
     padding: 2.5rem 3.4375rem 2.5rem 2.8125rem;
   }
 
@@ -3680,7 +3696,7 @@ template {
 
   .img-wrap__overlay {
     width: 15.625rem;
-    height: 13.75rem;
+    height: 15.625rem;
   }
 
   .dish-title {
@@ -3692,67 +3708,67 @@ template {
   }
 
   .webp .img-first {
-    background-image: url(../img/dish-lg-1@1x.webp);
+    background: url(../img/dish-lg-1@1x.webp);
   }
 
   .no-webp .img-first {
-    background-image: url(../img/dish-lg-1@1x.jpg);
+    background: url(../img/dish-lg-1@1x.jpg);
   }
 
   .webp .img-second {
-    background-image: url(../img/dish-lg-2@1x.webp);
+    background: url(../img/dish-lg-2@1x.webp);
   }
 
   .no-webp .img-second {
-    background-image: url(../img/dish-lg-2@1x.jpg);
+    background: url(../img/dish-lg-2@1x.jpg);
   }
 
   .webp .img-third {
-    background-image: url(../img/dish-lg-3@1x.webp);
+    background: url(../img/dish-lg-3@1x.webp);
   }
 
   .no-webp .img-third {
-    background-image: url(../img/dish-lg-3@1x.jpg);
+    background: url(../img/dish-lg-3@1x.jpg);
   }
 
   .webp .img-fourth {
-    background-image: url(../img/dish-lg-4@1x.webp);
+    background: url(../img/dish-lg-4@1x.webp);
   }
 
   .no-webp .img-fourth {
-    background-image: url(../img/dish-lg-4@1x.jpg);
+    background: url(../img/dish-lg-4@1x.jpg);
   }
 
   .webp .img-fifth {
-    background-image: url(../img/dish-lg-5@1x.webp);
+    background: url(../img/dish-lg-5@1x.webp);
   }
 
   .no-webp .img-fifth {
-    background-image: url(../img/dish-lg-5@1x.jpg);
+    background: url(../img/dish-lg-5@1x.jpg);
   }
 
   .webp .img-sixth {
-    background-image: url(../img/dish-lg-6@1x.webp);
+    background: url(../img/dish-lg-6@1x.webp);
   }
 
   .no-webp .img-sixth {
-    background-image: url(../img/dish-lg-6@1x.jpg);
+    background: url(../img/dish-lg-6@1x.jpg);
   }
 
   .webp .img-seventh {
-    background-image: url(../img/dish-lg-7@1x.webp);
+    background: url(../img/dish-lg-7@1x.webp);
   }
 
   .no-webp .img-seventh {
-    background-image: url(../img/dish-lg-7@1x.jpg);
+    background: url(../img/dish-lg-7@1x.jpg);
   }
 
   .webp .img-eighth {
-    background-image: url(../img/dish-lg-8@1x.webp);
+    background: url(../img/dish-lg-8@1x.webp);
   }
 
   .no-webp .img-eighth {
-    background-image: url(../img/dish-lg-8@1x.jpg);
+    background: url(../img/dish-lg-8@1x.jpg);
   }
 
   .menu-block-drinks,
@@ -3815,158 +3831,136 @@ template {
   .no-webp .footer__halfdish--right {
     background-image: url(../img/half-dish-4-lg@2x.png);
   }
+}
 
+@media screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 1.5), screen and (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1440px) and (min-resolution: 192dpi) {
   .webp .img-first {
-    background-image: url(../img/dish-lg-1@2x.webp);
+    background: url(../img/dish-lg-1@2x.webp);
   }
 
   .no-webp .img-first {
-    background-image: url(../img/dish-lg-1@2x.jpg);
+    background: url(../img/dish-lg-1@2x.jpg);
   }
 
   .webp .img-second {
-    background-image: url(../img/dish-lg-2@2x.webp);
+    background: url(../img/dish-lg-2@2x.webp);
   }
 
   .no-webp .img-second {
-    background-image: url(../img/dish-lg-2@2x.jpg);
+    background: url(../img/dish-lg-2@2x.jpg);
   }
 
   .webp .img-third {
-    background-image: url(../img/dish-lg-3@2x.webp);
+    background: url(../img/dish-lg-3@2x.webp);
   }
 
   .no-webp .img-third {
-    background-image: url(../img/dish-lg-3@2x.jpg);
+    background: url(../img/dish-lg-3@2x.jpg);
   }
 
   .webp .img-fourth {
-    background-image: url(../img/dish-lg-4@2x.webp);
+    background: url(../img/dish-lg-4@2x.webp);
   }
 
   .no-webp .img-fourth {
-    background-image: url(../img/dish-lg-4@2x.jpg);
+    background: url(../img/dish-lg-4@2x.jpg);
   }
 
   .webp .img-fifth {
-    background-image: url(../img/dish-lg-5@2x.webp);
+    background: url(../img/dish-lg-5@2x.webp);
   }
 
   .no-webp .img-fifth {
-    background-image: url(../img/dish-lg-5@2x.jpg);
+    background: url(../img/dish-lg-5@2x.jpg);
   }
 
   .webp .img-sixth {
-    background-image: url(../img/dish-lg-6@2x.webp);
+    background: url(../img/dish-lg-6@2x.webp);
   }
 
   .no-webp .img-sixth {
-    background-image: url(../img/dish-lg-6@2x.jpg);
+    background: url(../img/dish-lg-6@2x.jpg);
   }
 
   .webp .img-seventh {
-    background-image: url(../img/dish-lg-7@2x.webp);
+    background: url(../img/dish-lg-7@2x.webp);
   }
 
   .no-webp .img-seventh {
-    background-image: url(../img/dish-lg-7@2x.jpg);
+    background: url(../img/dish-lg-7@2x.jpg);
   }
 
   .webp .img-eighth {
-    background-image: url(../img/dish-lg-8@2x.webp);
+    background: url(../img/dish-lg-8@2x.webp);
   }
 
   .no-webp .img-eighth {
-    background-image: url(../img/dish-lg-8@2x.jpg);
+    background: url(../img/dish-lg-8@2x.jpg);
   }
 }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
-  .webp .logo__link {
-    background: url(../img/logo-lg@2x.webp);
-  }
-
-  .no-webp .logo__link {
-    background: url(../img/logo-lg@2x.png);
-  }
-
-  .webp .img__back {
-    background-image: url(../img/restaurant-back-xxs@2x.webp);
-  }
-
-  .no-webp .img__back {
-    background-image: url(../img/restaurant-back-xxs@2x.png);
-  }
-
-  .webp .img__front {
-    background-image: url(../img/restaurant-front-xxs@2x.webp);
-  }
-
-  .no-webp .img__front {
-    background-image: url(../img/restaurant-front-xxs@2x.jpg);
-  }
-
+@media (-webkit-min-device-pixel-ratio: 1.5), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .webp .img-first {
-    background-image: url(../img/dish-lg-1@2x.webp);
+    background: url(../img/dish-lg-1@2x.webp);
   }
 
   .no-webp .img-first {
-    background-image: url(../img/dish-lg-1@2x.jpg);
+    background: url(../img/dish-lg-1@2x.jpg);
   }
 
   .webp .img-second {
-    background-image: url(../img/dish-lg-2@2x.webp);
+    background: url(../img/dish-lg-2@2x.webp);
   }
 
   .no-webp .img-second {
-    background-image: url(../img/dish-lg-2@2x.jpg);
+    background: url(../img/dish-lg-2@2x.jpg);
   }
 
   .webp .img-third {
-    background-image: url(../img/dish-lg-3@2x.webp);
+    background: url(../img/dish-lg-3@2x.webp);
   }
 
   .no-webp .img-third {
-    background-image: url(../img/dish-lg-3@2x.jpg);
+    background: url(../img/dish-lg-3@2x.jpg);
   }
 
   .webp .img-fourth {
-    background-image: url(../img/dish-lg-4@2x.webp);
+    background: url(../img/dish-lg-4@2x.webp);
   }
 
   .no-webp .img-fourth {
-    background-image: url(../img/dish-lg-4@2x.jpg);
+    background: url(../img/dish-lg-4@2x.jpg);
   }
 
   .webp .img-fifth {
-    background-image: url(../img/dish-lg-5@2x.webp);
+    background: url(../img/dish-lg-5@2x.webp);
   }
 
   .no-webp .img-fifth {
-    background-image: url(../img/dish-lg-5@2x.jpg);
+    background: url(../img/dish-lg-5@2x.jpg);
   }
 
   .webp .img-sixth {
-    background-image: url(../img/dish-lg-6@2x.webp);
+    background: url(../img/dish-lg-6@2x.webp);
   }
 
   .no-webp .img-sixth {
-    background-image: url(../img/dish-lg-6@2x.jpg);
+    background: url(../img/dish-lg-6@2x.jpg);
   }
 
   .webp .img-seventh {
-    background-image: url(../img/dish-lg-7@2x.webp);
+    background: url(../img/dish-lg-7@2x.webp);
   }
 
   .no-webp .img-seventh {
-    background-image: url(../img/dish-lg-7@2x.jpg);
+    background: url(../img/dish-lg-7@2x.jpg);
   }
 
   .webp .img-eighth {
-    background-image: url(../img/dish-lg-8@2x.webp);
+    background: url(../img/dish-lg-8@2x.webp);
   }
 
   .no-webp .img-eighth {
-    background-image: url(../img/dish-lg-8@2x.jpg);
+    background: url(../img/dish-lg-8@2x.jpg);
   }
 }
